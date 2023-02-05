@@ -2,7 +2,7 @@
 import { Navbar } from "./components";
 
 // containers
-import { Hero } from "./container";
+import { About, Hero, Skills } from "./container";
 
 // styles
 import "./styles/global.scss";
@@ -12,6 +12,8 @@ function App() {
 		<div className="flex flex-col items-center">
 			<Navbar />
 			<Hero />
+			<About />
+			<Skills />
 		</div>
 	);
 }

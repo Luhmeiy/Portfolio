@@ -26,7 +26,11 @@ const Navbar = () => {
 
 	return (
 		<nav className="w-full flex justify-center px-4 py-8 bg-[rgba(255, 255, 255, .25)] backdrop-filter backdrop-blur-sm border-b border-b-[rgba(255, 255, 255, .18)] fixed z-10 max-tablet:bottom-0 max-tablet:bg-white max-tablet:px-6 max-tablet:py-3 max-tablet:rounded-xl max-tablet:shadow-[0_0_20px_rgba(168,168,168,.15)]">
-			<div className="w-full max-w-6xl flex justify-between items-center">
+			<motion.div
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 0.75, ease: "easeInOut" }}
+				className="w-full max-w-6xl flex justify-between items-center opacity-0"
+			>
 				<div className="text-3xl font-bold text-secondary max-tablet:text-2xl">
 					Medeiros
 				</div>
@@ -40,7 +44,7 @@ const Navbar = () => {
 							>
 								<a
 									href={`#${item}`}
-									className="text-gray-color uppercase font-bold duration-[.3s] ease-in-out hover:text-secondary"
+									className="text-gray-600 uppercase font-bold duration-[.3s] ease-in-out hover:text-secondary"
 								>
 									{item}
 								</a>
@@ -78,7 +82,7 @@ const Navbar = () => {
 										>
 											<a
 												href={`#${item}`}
-												className="text-gray-color uppercase text-sm font-bold flex flex-col items-center duration-[.3s] ease-in-out hover:text-secondary"
+												className="text-gray-500 uppercase text-sm font-bold flex flex-col items-center duration-[.3s] ease-in-out hover:text-secondary"
 											>
 												{icons[i]}
 												<span className="mt-1">
@@ -98,7 +102,7 @@ const Navbar = () => {
 						)}
 					</AnimatePresence>
 				</div>
-			</div>
+			</motion.div>
 		</nav>
 	);
 };
