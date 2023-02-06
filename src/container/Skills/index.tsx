@@ -32,7 +32,10 @@ const Skills = () => {
 	const isInView = useInView(ref, { once: true });
 
 	return (
-		<div className="w-full h-screen bg-white flex flex-col justify-center items-center">
+		<div
+			className="w-full h-screen bg-white flex flex-col justify-center items-center"
+			id="skills"
+		>
 			<motion.div
 				whileInView={{ opacity: 1 }}
 				initial={{ opacity: 0 }}

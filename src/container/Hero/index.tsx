@@ -3,7 +3,10 @@ import { PaperPlaneRight } from "phosphor-react";
 
 const Hero = () => {
 	return (
-		<div className="w-full max-w-6xl h-screen flex items-center [@media(max-width:1152px)]:px-4">
+		<div
+			className="w-full max-w-6xl h-screen flex items-center [@media(max-width:1152px)]:px-4"
+			id="home"
+		>
 			<motion.div
 				whileInView={{ opacity: 1 }}
 				initial={{ opacity: 0 }}

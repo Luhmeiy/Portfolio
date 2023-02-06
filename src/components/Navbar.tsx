@@ -45,6 +45,7 @@ const Navbar = () => {
 								<a
 									href={`#${item}`}
 									className="text-gray-600 uppercase font-bold duration-[.3s] ease-in-out hover:text-secondary"
+									aria-label={`Scroll to ${item}`}
 								>
 									{item}
 								</a>
