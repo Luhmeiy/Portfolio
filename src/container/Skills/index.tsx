@@ -1,5 +1,5 @@
 // libraries
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 // React
 import { useRef } from "react";
@@ -33,13 +33,15 @@ const Skills = () => {
 
 	return (
 		<div className="w-full h-screen bg-white flex flex-col justify-center items-center">
-			<div
-				className={`w-full max-w-6xl grid grid-cols-2 justify-center relative translate-y-52 opacity-0 ${
-					isInView ? "translate-y-0 opacity-100" : ""
-				} transition-all duration-700 ease-in-out [@media(max-width:1152px)]:px-4 max-tablet:grid-cols-1`}
+			<motion.div
+				whileInView={{ opacity: 1 }}
+				initial={{ opacity: 0 }}
+				className={`w-full max-w-6xl grid grid-cols-2 justify-center relative translate-y-52 ${
+					isInView ? "translate-y-0" : ""
+				} transition-all duration-[.75s] ease-in-out [@media(max-width:1152px)]:px-4 max-tablet:grid-cols-1`}
 				ref={ref}
 			>
-				<div className="grid grid-cols-4 justify-center items-center gap-y-8 px-4 max-tablet:grid-cols-3 max-tablet:row-start-2">
+				<div className="grid grid-cols-4 justify-center items-center gap-y-8 max-tablet:grid-cols-3 max-tablet:row-start-2">
 					{icons.map((icon, i) => (
 						<div
 							key={`link-${languages[i]}`}
@@ -56,7 +58,7 @@ const Skills = () => {
 				<h1 className="text-7xl font-bold mb-10 flex flex-col text-center [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-['Skills'] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-['Skills'] after:[-webkit-text-stroke-color:lightgray]">
 					Skills
 				</h1>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

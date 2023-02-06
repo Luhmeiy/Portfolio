@@ -1,5 +1,5 @@
 // libraries
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 // React
 import { useRef } from "react";
@@ -13,10 +13,12 @@ const About = () => {
 			className="w-full min-h-screen bg-white flex justify-center items-center"
 			id="about"
 		>
-			<div
-				className={`w-full max-w-6xl grid grid-cols-2 justify-center relative translate-y-52 opacity-0 ${
-					isInView ? "translate-y-0 opacity-100" : ""
-				} transition-all duration-700 ease-in-out [@media(max-width:1152px)]:px-4 max-tablet:grid-cols-1`}
+			<motion.div
+				whileInView={{ opacity: 1 }}
+				initial={{ opacity: 0 }}
+				className={`w-full max-w-6xl grid grid-cols-2 justify-center relative translate-y-52 ${
+					isInView ? "translate-y-0" : ""
+				} transition-all duration-[.75s] ease-in-out [@media(max-width:1152px)]:px-4 max-tablet:grid-cols-1`}
 				ref={ref}
 			>
 				<h1 className="text-7xl font-bold mb-10 flex flex-col text-center [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-['About_Me'] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-['About_Me'] after:[-webkit-text-stroke-color:lightgray]">
@@ -40,7 +42,7 @@ const About = () => {
 						it's good" fantasy/sci-fi movies.
 					</p>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };
