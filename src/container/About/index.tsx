@@ -16,16 +16,16 @@ const About = () => {
 			<motion.div
 				whileInView={{ opacity: 1 }}
 				initial={{ opacity: 0 }}
-				className={`w-full max-w-6xl grid grid-cols-2 justify-center relative translate-y-52 ${
+				className={`w-full max-w-6xl grid grid-cols-2 justify-items-center relative translate-y-52 ${
 					isInView ? "translate-y-0" : ""
 				} transition-all duration-[.75s] ease-in-out [@media(max-width:1152px)]:px-4 max-tablet:grid-cols-1`}
 				ref={ref}
 			>
-				<h1 className="text-7xl font-bold mb-10 flex flex-col text-center [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-['About_Me'] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-['About_Me'] after:[-webkit-text-stroke-color:lightgray]">
+				<h1 className="text-7xl font-bold mb-10 flex flex-col [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-['About_Me'] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-['About_Me'] after:[-webkit-text-stroke-color:lightgray]">
 					About Me
 				</h1>
 
-				<div className="max-w-xl text-xl text-gray-500 indent-10">
+				<div className="w-full max-w-xl text-xl text-gray-500 indent-10">
 					<p className="mb-5">
 						I'm a passionate full stack web developer based in
 						Brazil, interested in bringing creative and unique
