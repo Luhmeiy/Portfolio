@@ -2,7 +2,7 @@
 import { Navbar, SocialMedia } from "./components";
 
 // containers
-import { About, Hero, Skills } from "./container";
+import { About, Hero, Skills, Work } from "./container";
 
 // styles
 import "./styles/global.scss";
@@ -15,6 +15,7 @@ function App() {
 			<SocialMedia />
 			<About />
 			<Skills />
+			<Work />
 		</div>
 	);
 }
