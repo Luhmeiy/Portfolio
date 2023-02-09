@@ -75,7 +75,7 @@ const Work = () => {
 									<a
 										href={item.githublink}
 										target="_blank"
-										className="bg-white text-black flex justify-center items-center gap-2 px-3 py-1"
+										className="bg-white text-black flex justify-center items-center gap-2 px-3 py-1 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 									>
 										<i className="devicon-github-original text-2xl"></i>
 										Source Code
@@ -85,7 +85,7 @@ const Work = () => {
 										<a
 											href={item.livepreview}
 											target="_blank"
-											className="bg-white text-black flex justify-center items-center gap-2 px-3 py-1"
+											className="bg-white text-black flex justify-center items-center gap-2 px-3 py-1 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 										>
 											<Monitor size={24} color="black" />
 											Live Preview

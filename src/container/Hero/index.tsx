@@ -15,7 +15,7 @@ const Hero = () => {
 				<span className="text-3xl text-gray-700 font-bold">
 					Hello there, I'm
 				</span>
-				<h1 className="text-secondary text-8xl font-bold mb-5 max-tablet:text-5xl">
+				<h1 className="text-purple-600 text-8xl font-bold mb-5 max-tablet:text-5xl">
 					Medeiros
 				</h1>
 				<p className="text-2xl font-bold text-gray-600 mb-2 max-tablet:text-xl">
@@ -28,7 +28,7 @@ const Hero = () => {
 				</p>
 				<a
 					href="#contact"
-					className="group bg-secondary text-xl text-white font-bold inline-flex items-center gap-4 px-8 py-4 rounded-lg transition active:brightness-125"
+					className="group bg-purple-600 text-xl text-white font-bold inline-flex items-center gap-4 px-8 py-4 rounded-lg transition hover:bg-purple-700 active:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 				>
 					<span className="transition-all">Contact Me</span>
 					<PaperPlaneRight

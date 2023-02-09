@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "autoprefixer": "^10.4.13",
     "firebase": "^9.17.1",
     "framer-motion": "^9.0.1",

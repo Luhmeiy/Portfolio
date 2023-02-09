@@ -12,7 +12,7 @@ const SocialMedias = () => {
 				whileHover={{ scale: 1.2, borderColor: "#0077B5" }}
 				transition={{ duration: 0.3, ease: "easeInOut" }}
 				href="https://www.linkedin.com/in/luhmeiy/"
-				className="group bg-white h-14 w-14 flex justify-center items-center border border-gray-200 rounded-full mb-3"
+				className="group bg-white h-14 w-14 flex justify-center items-center border border-gray-200 rounded-full mb-3 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 			>
 				<i className="devicon-linkedin-plain text-gray-600 text-2xl group-hover:text-[#0077B5]"></i>
 			</motion.a>
@@ -21,7 +21,7 @@ const SocialMedias = () => {
 				whileHover={{ scale: 1.2, borderColor: "#000" }}
 				transition={{ duration: 0.3, ease: "easeInOut" }}
 				href="https://github.com/Luhmeiy"
-				className="group bg-white h-14 w-14 flex justify-center items-center border border-gray-200 rounded-full"
+				className="group bg-white h-14 w-14 flex justify-center items-center border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 			>
 				<i className="devicon-github-original text-gray-600 text-2xl group-hover:text-black"></i>
 			</motion.a>

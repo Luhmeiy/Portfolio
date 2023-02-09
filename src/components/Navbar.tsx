@@ -31,7 +31,7 @@ const Navbar = () => {
 				transition={{ duration: 0.75, ease: "easeInOut" }}
 				className="w-full max-w-6xl flex justify-between items-center opacity-0"
 			>
-				<div className="text-3xl font-bold text-secondary max-tablet:text-2xl">
+				<div className="text-3xl font-bold text-purple-600 max-tablet:text-2xl">
 					Medeiros
 				</div>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
 							>
 								<a
 									href={`#${item}`}
-									className="text-gray-600 uppercase font-bold duration-[.3s] ease-in-out hover:text-secondary"
+									className="text-gray-600 uppercase font-bold rounded-sm duration-[.3s] ease-in-out hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 									aria-label={`Scroll to ${item}`}
 								>
 									{item}
@@ -83,7 +83,7 @@ const Navbar = () => {
 										>
 											<a
 												href={`#${item}`}
-												className="text-gray-500 uppercase text-sm font-bold flex flex-col items-center duration-[.3s] ease-in-out hover:text-secondary"
+												className="text-gray-500 uppercase text-sm font-bold flex flex-col items-center duration-[.3s] ease-in-out hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 											>
 												{icons[i]}
 												<span className="mt-1">
