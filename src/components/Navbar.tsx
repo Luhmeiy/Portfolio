@@ -6,6 +6,7 @@ import {
 	Scroll,
 	SquaresFour,
 	User,
+	UsersThree,
 	X,
 } from "phosphor-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -22,7 +23,16 @@ const icons = [
 ];
 
 const Navbar = () => {
+	const [isMediaOpen, setMediaOpen] = useState(false);
 	const [toggle, setToggle] = useState(false);
+
+	function toggleMedia() {
+		if (isMediaOpen) {
+			setMediaOpen(false);
+		} else {
+			setMediaOpen(true);
+		}
+	}
 
 	return (
 		<nav className="w-full flex justify-center px-4 py-8 bg-[rgba(255, 255, 255, .25)] backdrop-filter backdrop-blur-sm border-b border-b-[rgba(255, 255, 255, .18)] fixed z-10 max-tablet:bottom-0 max-tablet:bg-white max-tablet:px-6 max-tablet:py-3 max-tablet:rounded-xl max-tablet:shadow-[0_0_20px_rgba(168,168,168,.15)]">
@@ -92,9 +102,49 @@ const Navbar = () => {
 											</a>
 										</li>
 									))}
+									<li className="m-4 cursor-pointer flex flex-col items-center relative group">
+										<button
+											className="text-gray-500 uppercase text-sm font-bold flex flex-col items-center duration-[.3s] ease-in-out hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
+											onClick={toggleMedia}
+										>
+											<UsersThree size={24} />
+											<span className="mt-1">
+												Social Media
+											</span>
+										</button>
+
+										{isMediaOpen && (
+											<motion.div className="bg-zinc-700 flex gap-8 text-white text-sm font-bold uppercase px-8 py-2 rounded-lg absolute mt-[-5.5rem] mr-0">
+												<a
+													href="https://www.linkedin.com/in/luhmeiy/"
+													className="flex flex-col items-center"
+												>
+													<i className="devicon-linkedin-plain text-2xl" />
+													<span className="mt-1">
+														Linkedin
+													</span>
+												</a>
+
+												<a
+													href="https://github.com/Luhmeiy"
+													className="flex flex-col items-center"
+												>
+													<i className="devicon-github-original text-2xl" />
+													<span className="mt-1">
+														GitHub
+													</span>
+												</a>
+
+												<div className="w-3 h-3 bg-zinc-700 -bottom-3 left-[calc(50%-.375rem)] border-b-zinc-700 border-r-zinc-700 translate-x-1/2 -translate-y-1/2 rotate-45 absolute" />
+											</motion.div>
+										)}
+									</li>
 								</ul>
 								<X
-									onClick={() => setToggle(false)}
+									onClick={() => {
+										setMediaOpen(false);
+										setToggle(false);
+									}}
 									size={24}
 									weight={"bold"}
 									className="text-red-400"

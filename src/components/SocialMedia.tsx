@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const SocialMedias = () => {
+const SocialMedia = () => {
 	return (
 		<motion.div
 			whileInView={{ opacity: 1 }}
@@ -29,4 +29,4 @@ const SocialMedias = () => {
 	);
 };
 
-export default SocialMedias;
+export default SocialMedia;
