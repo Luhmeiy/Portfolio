@@ -10,6 +10,7 @@ import {
 	X,
 } from "phosphor-react";
 import { AnimatePresence, motion } from "framer-motion";
+import * as Popover from "@radix-ui/react-popover";
 import { useTranslation } from "react-i18next";
 
 // React
@@ -99,42 +100,45 @@ const Navbar = () => {
 											</a>
 										</li>
 									))}
+
 									<li className="m-4 cursor-pointer flex flex-col items-center relative group">
-										<button
-											className="text-gray-500 uppercase text-sm font-bold flex flex-col items-center duration-[.3s] ease-in-out hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
-											onClick={toggleMedia}
-										>
-											<UsersThree size={24} />
-											<span className="mt-1">
-												{t("nav.social")}
-											</span>
-										</button>
-
-										{isMediaOpen && (
-											<motion.div className="bg-zinc-700 flex gap-8 text-white text-sm font-bold uppercase px-8 py-2 rounded-lg absolute mt-[-5.5rem] mr-0">
-												<a
-													href="https://www.linkedin.com/in/luhmeiy/"
-													className="flex flex-col items-center"
-												>
-													<i className="devicon-linkedin-plain text-2xl" />
+										<Popover.Root>
+											<Popover.Trigger asChild>
+												<button className="text-gray-500 uppercase text-sm font-bold flex flex-col items-center duration-[.3s] ease-in-out hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white">
+													<UsersThree size={24} />
 													<span className="mt-1">
-														Linkedin
+														{t("nav.social")}
 													</span>
-												</a>
+												</button>
+											</Popover.Trigger>
 
-												<a
-													href="https://github.com/Luhmeiy"
-													className="flex flex-col items-center"
-												>
-													<i className="devicon-github-original text-2xl" />
-													<span className="mt-1">
-														GitHub
-													</span>
-												</a>
+											<Popover.Portal>
+												<Popover.Content className="bg-zinc-700 flex text-white text-sm font-bold uppercase px-8 py-2 mr-4 rounded-lg z-20 tablet:hidden">
+													<a
+														href="https://www.linkedin.com/in/luhmeiy/"
+														target="_blank"
+														className="flex flex-col items-center mr-8"
+													>
+														<i className="devicon-linkedin-plain text-2xl" />
+														<span className="mt-1">
+															Linkedin
+														</span>
+													</a>
 
-												<div className="w-3 h-3 bg-zinc-700 -bottom-3 left-[calc(50%-.375rem)] border-b-zinc-700 border-r-zinc-700 translate-x-1/2 -translate-y-1/2 rotate-45 absolute" />
-											</motion.div>
-										)}
+													<a
+														href="https://github.com/Luhmeiy"
+														target="_blank"
+														className="flex flex-col items-center"
+													>
+														<i className="devicon-github-original text-2xl" />
+														<span className="mt-1">
+															GitHub
+														</span>
+													</a>
+													<Popover.Arrow />
+												</Popover.Content>
+											</Popover.Portal>
+										</Popover.Root>
 									</li>
 								</ul>
 								<X
