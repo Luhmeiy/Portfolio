@@ -5,6 +5,7 @@ import { database } from "../../services/firebase";
 // libraries
 import { motion, useInView } from "framer-motion";
 import { Monitor } from "phosphor-react";
+import { useTranslation } from "react-i18next";
 
 // React
 import { useEffect, useRef, useState } from "react";
@@ -18,6 +19,8 @@ interface Projects {
 
 const Work = () => {
 	const [projects, setProjects] = useState([]);
+
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		onValue(ref(database), (snapshot) => {
@@ -46,13 +49,13 @@ const Work = () => {
 				ref={viewRef}
 			>
 				<div className="text-center mb-10">
-					<h1 className="text-7xl font-bold">Work</h1>
+					<h1 className="text-7xl font-bold">{t("work.title")}</h1>
 
 					<p className="hidden tablet:inline-block">
-						Hover to reveal links ;)
+						{t("work.hover")}
 					</p>
 					<p className="hidden max-tablet:inline-block">
-						Click to reveal links ;)
+						{t("work.click")}
 					</p>
 				</div>
 
@@ -78,7 +81,7 @@ const Work = () => {
 										className="bg-white text-black flex justify-center items-center gap-2 px-3 py-1 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 									>
 										<i className="devicon-github-original text-2xl"></i>
-										Source Code
+										{t("work.source")}
 									</a>
 
 									{item.livepreview && (
@@ -88,7 +91,7 @@ const Work = () => {
 											className="bg-white text-black flex justify-center items-center gap-2 px-3 py-1 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 										>
 											<Monitor size={24} color="black" />
-											Live Preview
+											{t("work.live")}
 										</a>
 									)}
 								</div>

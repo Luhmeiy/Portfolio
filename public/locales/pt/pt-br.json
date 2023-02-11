@@ -1,0 +1,30 @@
+{
+	"translation": {
+		"hero": {
+			"presentation": "Olá, eu sou o",
+			"name": "Medeiros",
+			"job": "Desenvolvedor Full Stack Júnior",
+			"small_about": "Apaixonado por dar vida a ideias criativas e resolver problemas que irão impulsionar meus conhecimentos e habilidades ainda mais.",
+			"contact": "Contate-me"
+		},
+		"about": {
+			"p1": "Sou um desenvolvedor web Full Stack brasileiro, interessado em dar vida a projetos criativos e únicos com as habilidades que estou desenvolvendo rapidamente.",
+			"p2": "Não importa a dificuldade: <span className=\"font-bold\">Eu aceito</span>. Adoro a emoção da possibilidade de aprender e aprimorar meus conhecimentos.",
+			"p3": "Eu também sou um escritor e um ávido apreciador de filmes \"tão ruim, que é bom\" de fantasia/sci-fi dos anos 80."
+		},
+		"work": {
+			"title": "Trabalhos",
+			"hover": "Passe o mouse por cima para revelar links ;)",
+			"click": "Clique para revelar links ;)",
+			"source": "Código Fonte",
+			"live": "Pré-Visualização"
+		},
+		"contact": {
+			"title": "Contate-me",
+			"name": "Seu nome",
+			"email": "Seu email",
+			"message": "Sua mensagem",
+			"button": "Enviar mensagem"
+		}
+	}
+}

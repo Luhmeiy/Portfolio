@@ -1,5 +1,6 @@
 // libraries
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 // React
 import { useRef } from "react";
@@ -7,6 +8,8 @@ import { useRef } from "react";
 const About = () => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
+
+	const { t } = useTranslation();
 
 	return (
 		<div
@@ -21,26 +24,19 @@ const About = () => {
 				} transition-all duration-[.75s] ease-in-out [@media(max-width:1152px)]:px-4 max-tablet:grid-cols-1`}
 				ref={ref}
 			>
-				<h1 className="text-7xl font-bold mb-10 flex flex-col [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-['About_Me'] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-['About_Me'] after:[-webkit-text-stroke-color:lightgray]">
+				<h1
+					className={`text-7xl font-bold mb-10 flex flex-col [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-['About_Me'] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-['About_Me'] after:[-webkit-text-stroke-color:lightgray]`}
+				>
 					About Me
 				</h1>
 
 				<div className="w-full max-w-xl text-xl text-gray-500 indent-10">
-					<p className="mb-5">
-						I'm a passionate full stack web developer based in
-						Brazil, interested in bringing creative and unique
-						projects to life with the skills I'm quickly developing.
-					</p>
-					<p className="mb-5">
-						Doesn't matter the difficulty:{" "}
-						<span className="font-bold">I'll take it</span>. I love
-						the thrill of the possibility of learning and improving
-						my knowledge.
-					</p>
-					<p>
-						I'm also a writer and an avid enjoyer of 80s "so bad,
-						it's good" fantasy/sci-fi movies.
-					</p>
+					<p className="mb-5">{t("about.p1")}</p>
+					<p
+						dangerouslySetInnerHTML={{ __html: t("about.p2") }}
+						className="mb-5"
+					></p>
+					<p>{t("about.p3")}</p>
 				</div>
 			</motion.div>
 		</div>
