@@ -35,8 +35,8 @@ const Contact = () => {
 			<motion.form
 				whileInView={{ opacity: 1 }}
 				initial={{ opacity: 0 }}
-				className={`w-full max-w-6xl flex flex-col items-center relative translate-y-52 ${
-					isInView ? "translate-y-0" : ""
+				className={`w-full max-w-6xl flex flex-col items-center relative ${
+					isInView ? "translate-y-0" : "translate-y-52"
 				} transition-all duration-[.75s] ease-in-out [@media(max-width:1152px)]:px-4`}
 				ref={viewRef}
 				onSubmit={sendEmail}
