@@ -10,7 +10,7 @@ const Hero = () => {
 
 	return (
 		<div
-			className="w-full max-w-6xl h-screen flex items-center [@media(max-width:1152px)]:px-4"
+			className="w-full max-w-6xl min-h-screen flex items-center py-10 [@media(max-width:1152px)]:px-4"
 			id={`${t("hero.id")}`}
 		>
 			<motion.div

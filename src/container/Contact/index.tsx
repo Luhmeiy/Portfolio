@@ -29,7 +29,7 @@ const Contact = () => {
 
 	return (
 		<div
-			className="w-full min-h-screen flex flex-col justify-center items-center"
+			className="w-full min-h-screen flex flex-col justify-center items-center py-10"
 			id={`${t("contact.id")}`}
 		>
 			<motion.form

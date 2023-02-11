@@ -15,7 +15,7 @@ import "./styles/global.scss";
 
 function App() {
 	return (
-		<div className="flex flex-col items-center">
+		<div className="flex flex-col items-center mb-10">
 			<Suspense fallback={null}>
 				<Navbar />
 				<Hero />

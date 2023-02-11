@@ -13,7 +13,7 @@ const About = () => {
 
 	return (
 		<div
-			className="w-full min-h-screen flex justify-center items-center"
+			className="w-full min-h-screen flex justify-center items-center py-10"
 			id={`${t("about.id")}`}
 		>
 			<motion.div
@@ -26,7 +26,7 @@ const About = () => {
 			>
 				<h1
 					data-text={`${t("about.title")}`}
-					className={`text-7xl font-bold mb-10 flex flex-col [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-[attr(data-text)] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-[attr(data-text)] after:[-webkit-text-stroke-color:lightgray]`}
+					className={`text-7xl font-bold mb-10 flex flex-col text-center [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-[attr(data-text)] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-[attr(data-text)] after:[-webkit-text-stroke-color:lightgray]`}
 				>
 					{t("about.title")}
 				</h1>

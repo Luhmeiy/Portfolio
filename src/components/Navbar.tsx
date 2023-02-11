@@ -41,7 +41,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav className="w-full flex justify-center px-4 py-8 bg-[rgba(255, 255, 255, .25)] backdrop-filter backdrop-blur-sm border-b border-b-[rgba(255, 255, 255, .18)] fixed z-10 max-tablet:bottom-0 max-tablet:bg-white max-tablet:px-6 max-tablet:py-3 max-tablet:rounded-xl max-tablet:shadow-[0_0_20px_rgba(168,168,168,.15)]">
+		<nav className="w-full flex justify-center px-4 py-8 bg-[rgba(255, 255, 255, .25)] backdrop-filter backdrop-blur-sm border-b border-b-[rgba(255, 255, 255, .18)] fixed z-10 max-tablet:bottom-0 max-tablet:bg-white max-tablet:px-6 max-tablet:py-3 max-tablet:rounded-xl max-tablet:shadow-[0_0_20px_rgba(168,168,168,.25)]">
 			<motion.div
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.75, ease: "easeInOut" }}
@@ -81,7 +81,7 @@ const Navbar = () => {
 									duration: 0.5,
 									ease: "easeInOut",
 								}}
-								className="bg-white fixed z-20 px-6 py-4 inset-x-0 inset-b-0 w-full flex flex-col items-end rounded-3xl shadow-[0_0_20px_rgba(168,168,168,.15)]"
+								className="bg-white fixed z-20 px-6 py-4 inset-x-0 inset-b-0 w-full flex flex-col items-end rounded-3xl shadow-[0_0_20px_rgba(168,168,168,.25)]"
 							>
 								<ul className="w-full h-full grid grid-cols-3">
 									{navItems.map((item, i) => (

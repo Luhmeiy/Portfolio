@@ -37,7 +37,7 @@ const Work = () => {
 
 	return (
 		<div
-			className="w-full min-h-screen flex flex-col justify-center items-center"
+			className="w-full min-h-screen flex flex-col justify-center items-center py-10"
 			id={`${t("work.id")}`}
 		>
 			<motion.div
@@ -74,7 +74,7 @@ const Work = () => {
 									{item.title}
 								</p>
 
-								<div className="flex gap-3">
+								<div className="flex flex-wrap justify-center gap-3">
 									<a
 										href={item.githublink}
 										target="_blank"

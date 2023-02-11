@@ -33,7 +33,7 @@ const Skills = () => {
 
 	return (
 		<div
-			className="w-full h-screen flex flex-col justify-center items-center"
+			className="w-full min-h-screen flex flex-col justify-center items-center py-10"
 			id="skills"
 		>
 			<motion.div
