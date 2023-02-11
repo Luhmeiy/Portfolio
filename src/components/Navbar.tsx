@@ -10,6 +10,7 @@ import {
 	X,
 } from "phosphor-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 // React
 import { useState } from "react";
@@ -25,6 +26,10 @@ const icons = [
 const Navbar = () => {
 	const [isMediaOpen, setMediaOpen] = useState(false);
 	const [toggle, setToggle] = useState(false);
+
+	const { t } = useTranslation();
+
+	const navItems: string[] = t("nav.titles", { returnObjects: true });
 
 	function toggleMedia() {
 		if (isMediaOpen) {
@@ -46,22 +51,20 @@ const Navbar = () => {
 				</div>
 
 				<ul className="flex justify-center items-center max-tablet:hidden">
-					{["home", "about", "skills", "work", "contact"].map(
-						(item) => (
-							<li
-								key={`link-${item}`}
-								className="mx-4 cursor-pointer flex justify-center"
+					{navItems.map((item) => (
+						<li
+							key={`link-${item}`}
+							className="mx-4 cursor-pointer flex justify-center"
+						>
+							<a
+								href={`#${item}`}
+								className="text-gray-600 uppercase font-bold rounded-sm duration-[.3s] ease-in-out hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
+								aria-label={`Scroll to ${item}`}
 							>
-								<a
-									href={`#${item}`}
-									className="text-gray-600 uppercase font-bold rounded-sm duration-[.3s] ease-in-out hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
-									aria-label={`Scroll to ${item}`}
-								>
-									{item}
-								</a>
-							</li>
-						)
-					)}
+								{item}
+							</a>
+						</li>
+					))}
 				</ul>
 
 				<div className="rounded-full relative flex justify-center items-center tablet:hidden">
@@ -80,13 +83,7 @@ const Navbar = () => {
 								className="bg-white fixed z-20 px-6 py-4 inset-x-0 inset-b-0 w-full flex flex-col items-end rounded-3xl shadow-[0_0_20px_rgba(168,168,168,.15)]"
 							>
 								<ul className="w-full h-full grid grid-cols-3">
-									{[
-										"home",
-										"about",
-										"skills",
-										"work",
-										"contact",
-									].map((item, i) => (
+									{navItems.map((item, i) => (
 										<li
 											key={item}
 											className="m-4 cursor-pointer flex flex-col items-center group"
@@ -109,7 +106,7 @@ const Navbar = () => {
 										>
 											<UsersThree size={24} />
 											<span className="mt-1">
-												Social Media
+												{t("nav.social")}
 											</span>
 										</button>
 

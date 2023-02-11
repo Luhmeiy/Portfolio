@@ -38,7 +38,7 @@ const Work = () => {
 	return (
 		<div
 			className="w-full min-h-screen flex flex-col justify-center items-center"
-			id="work"
+			id={`${t("work.id")}`}
 		>
 			<motion.div
 				whileInView={{ opacity: 1 }}

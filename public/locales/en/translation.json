@@ -1,0 +1,37 @@
+{
+	"nav": {
+		"titles": ["home", "about", "skills", "work", "contact"],
+		"social": "Social media"
+	},
+	"hero": {
+		"id": "hero",
+		"presentation": "Hello there, I'm",
+		"name": "Medeiros",
+		"job": "Junior Full Stack Developer",
+		"small_about": "Passionate about bringing creative ideas to life and tackling problems that will push my knowledge and skills further.",
+		"contact": "Contact Me"
+	},
+	"about": {
+		"id": "about",
+		"title": "About Me",
+		"p1": "I'm a passionate full stack web developer based in Brazil, interested in bringing creative and unique projects to life with the skills I'm quickly developing.",
+		"p2": "Doesn't matter the difficulty: <span className=\"font-bold\">I'll take it</span>. I love the thrill of the possibility of learning and improving my knowledge.",
+		"p3": "I'm also a writer and an avid enjoyer of 80s \"so bad, it's good\" fantasy/sci-fi movies."
+	},
+	"work": {
+		"id": "work",
+		"title": "Work",
+		"hover": "Hover to reveal links ;)",
+		"click": "Click to reveal links ;)",
+		"source": "Source Code",
+		"live": "Live Preview"
+	},
+	"contact": {
+		"id": "contact",
+		"title": "Contact Me",
+		"name": "Your name",
+		"email": "Your email",
+		"message": "Your message",
+		"button": "Send message"
+	}
+}

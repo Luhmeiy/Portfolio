@@ -14,7 +14,7 @@ const About = () => {
 	return (
 		<div
 			className="w-full min-h-screen flex justify-center items-center"
-			id="about"
+			id={`${t("about.id")}`}
 		>
 			<motion.div
 				whileInView={{ opacity: 1 }}
@@ -25,9 +25,10 @@ const About = () => {
 				ref={ref}
 			>
 				<h1
-					className={`text-7xl font-bold mb-10 flex flex-col [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-['About_Me'] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-['About_Me'] after:[-webkit-text-stroke-color:lightgray]`}
+					data-text={`${t("about.title")}`}
+					className={`text-7xl font-bold mb-10 flex flex-col [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px] [-webkit-text-stroke-color:gray] before:content-[attr(data-text)] before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke-color:black] after:content-[attr(data-text)] after:[-webkit-text-stroke-color:lightgray]`}
 				>
-					About Me
+					{t("about.title")}
 				</h1>
 
 				<div className="w-full max-w-xl text-xl text-gray-500 indent-10">

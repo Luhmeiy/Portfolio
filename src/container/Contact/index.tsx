@@ -30,7 +30,7 @@ const Contact = () => {
 	return (
 		<div
 			className="w-full min-h-screen flex flex-col justify-center items-center"
-			id="contact"
+			id={`${t("contact.id")}`}
 		>
 			<motion.form
 				whileInView={{ opacity: 1 }}
