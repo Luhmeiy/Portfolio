@@ -31,7 +31,7 @@ const Hero = () => {
 					{t("hero.small_about")}
 				</p>
 				<a
-					href="#contact"
+					href={`#${t("contact.id")}`}
 					className="group bg-purple-600 text-xl text-white font-bold inline-flex items-center gap-4 px-8 py-4 rounded-lg transition hover:bg-purple-700 active:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-white"
 				>
 					<span className="transition-all">{t("hero.contact")}</span>
