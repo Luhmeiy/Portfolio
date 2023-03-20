@@ -7,22 +7,22 @@ import { useRef } from "react";
 const icons = [
 	"devicon-typescript-plain bg-blue-50",
 	"devicon-sass-original bg-pink-50",
-	"devicon-html5-plain bg-gray-100",
 	"devicon-react-original bg-blue-50",
 	"devicon-tailwindcss-plain bg-blue-50",
-	"devicon-javascript-plain bg-gray-100",
 	"devicon-nodejs-plain bg-green-50",
+	"devicon-javascript-plain bg-gray-100",
+	"devicon-html5-plain bg-gray-100",
 	"devicon-css3-plain bg-blue-50",
 	"devicon-git-plain bg-orange-50",
 ];
 const languages = [
 	"TypeScript",
 	"Sass",
-	"HTML5",
 	"React",
 	"Tailwind",
-	"JavaScript",
 	"Node.js",
+	"JavaScript",
+	"HTML5",
 	"CSS",
 	"Git",
 ];
