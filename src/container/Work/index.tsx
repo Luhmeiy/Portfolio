@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 
 interface Projects {
+	designby?: string;
 	githublink: string;
 	imgurl: string;
 	livepreview?: string;
@@ -63,18 +64,27 @@ const Work = () => {
 					{projects.map((item: Projects) => (
 						<div
 							key={item.title}
-							className="group flex justify-center items-center relative"
+							className="group flex justify-center items-center relative shadow-lg"
 						>
 							<img src={item.imgurl} />
 
 							<div className="w-full h-full bg-[rgba(0,_0,_0,_.5)] absolute opacity-0 transition-all duration-300 group-hover:opacity-100"></div>
 
 							<div className="absolute opacity-0 transition-all duration-300 group-hover:opacity-100">
-								<p className="text-4xl text-white font-bold text-center mb-4">
+								<p className="text-4xl text-white font-bold text-center">
 									{item.title}
 								</p>
 
-								<div className="flex flex-wrap justify-center gap-3">
+								{item.designby && (
+									<p className="max-w-xs text-lg text-white text-center mt-1">
+										<span className="font-bold">
+											Design:
+										</span>{" "}
+										{item.designby}
+									</p>
+								)}
+
+								<div className="flex flex-wrap justify-center gap-3 mt-4">
 									<a
 										href={item.githublink}
 										target="_blank"
