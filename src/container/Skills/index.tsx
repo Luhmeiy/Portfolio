@@ -5,26 +5,35 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const icons = [
-	"devicon-typescript-plain bg-blue-50",
-	"devicon-sass-original bg-pink-50",
 	"devicon-react-original bg-blue-50",
+	"devicon-typescript-plain bg-blue-50",
 	"devicon-tailwindcss-plain bg-blue-50",
+	"devicon-firebase-plain bg-orange-50",
+	"devicon-sass-original bg-pink-50",
+	"devicon-express-original bg-gray-100",
+	"devicon-mongodb-plain bg-green-50",
 	"devicon-nodejs-plain bg-green-50",
 	"devicon-javascript-plain bg-gray-100",
 	"devicon-html5-plain bg-gray-100",
 	"devicon-css3-plain bg-blue-50",
 	"devicon-git-plain bg-orange-50",
+	"devicon-figma-plain bg-orange-50",
 ];
+
 const languages = [
-	"TypeScript",
-	"Sass",
 	"React",
+	"TypeScript",
 	"Tailwind",
+	"Firebase",
+	"Sass",
+	"Express.js",
+	"MongoDB",
 	"Node.js",
 	"JavaScript",
 	"HTML5",
 	"CSS",
 	"Git",
+	"Figma",
 ];
 
 const Skills = () => {

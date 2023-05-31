@@ -25,20 +25,11 @@ const icons = [
 ];
 
 const Navbar = () => {
-	const [isMediaOpen, setMediaOpen] = useState(false);
 	const [toggle, setToggle] = useState(false);
 
 	const { t } = useTranslation();
 
 	const navItems: string[] = t("nav.titles", { returnObjects: true });
-
-	function toggleMedia() {
-		if (isMediaOpen) {
-			setMediaOpen(false);
-		} else {
-			setMediaOpen(true);
-		}
-	}
 
 	return (
 		<nav className="w-full flex justify-center px-4 py-8 bg-[rgba(255, 255, 255, .25)] backdrop-filter backdrop-blur-sm border-b border-b-[rgba(255, 255, 255, .18)] fixed z-10 max-tablet:bottom-0 max-tablet:bg-white max-tablet:px-6 max-tablet:py-3 max-tablet:rounded-xl max-tablet:shadow-[0_0_20px_rgba(168,168,168,.25)]">
@@ -143,7 +134,6 @@ const Navbar = () => {
 								</ul>
 								<X
 									onClick={() => {
-										setMediaOpen(false);
 										setToggle(false);
 									}}
 									size={24}

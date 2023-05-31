@@ -5,7 +5,7 @@ import { Navbar, SocialMedia } from "./components";
 import { About, Contact, Hero, Skills, Work } from "./container";
 
 // libraries
-import "./i18n.ts";
+import "./i18n";
 
 // React
 import { Suspense } from "react";
