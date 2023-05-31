@@ -15,7 +15,7 @@
 		"id": "sobre",
 		"title": "Sobre Mim",
 		"p1": "Sou um desenvolvedor web Full Stack brasileiro, interessado em dar vida a projetos criativos e únicos com as habilidades que estou desenvolvendo rapidamente.",
-		"p2": "Não importa a dificuldade: <span className=\"font-bold\">Eu aceito</span>. Adoro a emoção da possibilidade de aprender e aprimorar meus conhecimentos.",
+		"p2": "Não importa a dificuldade: <span class=\"font-bold\">Eu aceito</span>. Adoro a emoção da possibilidade de aprender e aprimorar meus conhecimentos.",
 		"p3": "Eu também sou um escritor e um ávido apreciador de filmes \"tão ruim, que é bom\" de fantasia/sci-fi dos anos 80."
 	},
 	"work": {

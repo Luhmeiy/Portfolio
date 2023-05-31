@@ -10,6 +10,7 @@ const About = () => {
 	const isInView = useInView(ref, { once: true });
 
 	const { t } = useTranslation();
+	const stringWithHtml = t("about.p2");
 
 	return (
 		<div
@@ -34,7 +35,7 @@ const About = () => {
 				<div className="w-full max-w-xl text-xl text-gray-500 indent-10">
 					<p className="mb-5">{t("about.p1")}</p>
 					<p
-						dangerouslySetInnerHTML={{ __html: t("about.p2") }}
+						dangerouslySetInnerHTML={{ __html: stringWithHtml }}
 						className="mb-5"
 					></p>
 					<p>{t("about.p3")}</p>
